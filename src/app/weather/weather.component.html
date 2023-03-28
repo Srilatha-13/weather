@@ -1,0 +1,95 @@
+<body>
+  <div class="image-container">
+    <div class="title">
+      <!-- <div class="iconn">
+        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-weather-forecast-smart-technology-flaticons-lineal-color-flat-icons.png"/>
+      </div> -->
+      <h1>Weather Today</h1>
+    </div>
+
+    <div class="search-bar">
+      <form (ngSubmit)="onSearch()">
+        <div class="parent">
+          <div class="icon">
+            <img
+              src="https://img.icons8.com/emoji/48/null/magnifying-glass-tilted-left-emoji.png"
+            />
+          </div>
+          <div class="input-div">
+            <input
+              class="search"
+              type="text"
+              [(ngModel)]="city"
+              name="city"
+              placeholder="Search your city"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <div class="items">
+          <div class="area">
+            {{ newCity.charAt(0).toUpperCase() + newCity.slice(1) }}
+          </div>
+        </div>
+        <img
+          src="https://img.icons8.com/external-color-outline-adri-ansyah/64/null/external-user-home-screen-apps-color-outline-adri-ansyah-76.png"
+        />
+        <div class="temp">{{ temperature }}&deg;C</div>
+      </div>
+
+      <div class="right">
+        <div class="grid">
+          <div class="text">
+            <img
+              class="img-1"
+              src="https://img.icons8.com/clouds/100/null/apple-weather.png"
+            />
+            Weather Conditions
+            <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{ summary }}</span>
+          </div>
+          <div class="text">
+            <img
+              class="img-2"
+              src="https://img.icons8.com/color/48/null/disappearing.png"
+            /><br />
+            Feels like <span>&nbsp; &nbsp; &nbsp;{{ feelsLike }}&deg;C</span>
+          </div>
+          <div class="text">
+            <img
+              class="img-3"
+              src="https://img.icons8.com/arcade/64/null/dew-point.png"
+            /><br />
+            Humidity<span>&nbsp; &nbsp; &nbsp;{{ humidity }}%</span>
+          </div>
+          <div class="text">
+            <img
+              class="img-4"
+              src="https://img.icons8.com/stickers/100/null/barometer-gauge.png"
+            /><br />
+            Pressure <span>&nbsp; &nbsp; &nbsp;{{ pressure }} hPa</span>
+          </div>
+          <div class="text">
+            <img
+              class="img-5"
+              src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/null/external-visibility-content-creator-xnimrodx-lineal-color-xnimrodx.png"
+            /><br />
+            Visibility <span>&nbsp; &nbsp; &nbsp;{{ visibility }} km</span>
+          </div>
+          <div class="text">
+            <img
+              class="img-6"
+              src="https://img.icons8.com/external-phatplus-lineal-color-phatplus/64/null/external-wind-hotel-and-travel-phatplus-lineal-color-phatplus.png"
+            />
+            <br />
+            Wind speed <span> &nbsp; &nbsp; &nbsp;{{ wind }} km/h</span>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</body>
